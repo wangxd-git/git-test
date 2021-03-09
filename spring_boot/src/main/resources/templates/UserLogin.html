@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Bootstrap Template</title>
+
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" type="text/css" href="../static/bootstrap3/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="../static/bootstrap3/font-awesome-4.7.0/css/font-awesome.css"/>
+</head>
+<body>
+<div>
+  <form action="/userLogin" method="post">
+    <table class="table table-hover">
+      <thead>
+      <tr>
+        <th>id</th>
+        <th>姓名</th>
+        <th>密码</th>
+        <th>学号</th>
+      </tr>
+      </thead>
+      <tbody>
+
+      <tr th:each="user:${userList}">
+        <td th:text="${user.id}">t${}</td>
+        <td th:text="${user.name}">Bangalore</td>
+        <td th:text="${user.password}">560001</td>
+        <td th:text="${user.stunumber}">560001</td>
+      </tr>
+      </tbody>
+    </table>
+  </form>
+</div>
+</body>
+<script type="text/javascript" src="../static/bootstrap3/jquery.min.js"></script>
+<script type="text/javascript" src="../static/bootstrap3/js/bootstrap.js"></script>
+<script type="text/javascript" src="../static/bootstrap3/js/holder.js"></script>
+<script type="text/javascript" src="../static/bootstrap3/js/html5shiv.min.js"></script>
+<script type="text/javascript" src="../static/bootstrap3/js/css3-mediaqueries.js"></script>
+<script type="text/javascript" src="../static/bootstrap3/js/respond.min.js"></script>
+</html>
